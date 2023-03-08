@@ -1,7 +1,10 @@
-var crypto = require('crypto');
+//Crypto module
+//Crypto module helps to encrypt, this one uses hash.
 
-var mykey = crypto.createCipher('aes-128-cbc', 'mypassword');
-var mystr = mykey.update('abc', 'utf8', 'bin')
-mystr += mykey.final('bin');
+const crypto = require('crypto');
 
-console.log(mystr); 
+const message = 'Secret Message';
+const hash = crypto.createHash('sha256').update(message).digest('hex');
+
+console.log(hash);
+
