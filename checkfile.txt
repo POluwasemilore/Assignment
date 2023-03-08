@@ -1,0 +1,3 @@
+FILE CHECK SUCCESSFUL
+
+*This is a simple file to check the fs module code.*
